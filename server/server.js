@@ -6,7 +6,7 @@ const server = http.createServer();
 
 const room = new Map; 
 server.listen(PORT, () => {
-    console.log("server started on port 8080");
+    console.log("server started on port: ", PORT);
 })
 
 wsServer = new WebSocketServer({

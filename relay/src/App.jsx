@@ -30,7 +30,7 @@ function App() {
     
     function joinRoom(){
         roomId.current = window.prompt("Enter Room: ");
-        if(!roomId) joinRoom();
+        if(!roomId.current) joinRoom();
         socket.send(JSON.stringify({type: "joinRoom", roomId: roomId.current})) 
     }
 
