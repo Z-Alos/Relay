@@ -1,8 +1,8 @@
 const WebSocketServer = require('websocket').server;
-const https = require('https');
+const http = require('http');
 
 const PORT = process.env.PORT || 8080;
-const server = https.createServer();
+const server = http.createServer();
 
 const room = new Map; 
 server.listen(PORT, () => {
