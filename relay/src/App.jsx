@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import './App.css';
 
-const socket = new WebSocket('wss://relay-vdjw.onrender.com', 'echo-protocol');
+// const socket = new WebSocket('wss://relay-vdjw.onrender.com', 'echo-protocol');
+const socket = new WebSocket('ws://localhost:8080', 'echo-protocol');
 
 function App() {
     const msgInput = useRef(null);
@@ -15,8 +16,8 @@ function App() {
     useEffect(() => {
         socket.addEventListener('open', () => {
             socket.send(JSON.stringify({type: "notify", message: "New User Joined..."}));
+            joinRoom();
         })
-        joinRoom();
         msgInput.current.focus();
         socket.addEventListener('message', (event) => {
             const data = JSON.parse(event.data)

@@ -1,8 +1,8 @@
 const WebSocketServer = require('websocket').server;
-const http = require('http');
+const https = require('https');
 
 const PORT = process.env.PORT || 8080;
-const server = http.createServer();
+const server = https.createServer();
 
 const room = new Map; 
 server.listen(PORT, () => {
@@ -10,8 +10,7 @@ server.listen(PORT, () => {
 })
 
 wsServer = new WebSocketServer({
-    httpServer: server,
-    autoAcceptConnections: true
+    httpServer: server
     // !todo() implement authenticity (origin)
 })
 
