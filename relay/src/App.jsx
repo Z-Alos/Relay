@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import './App.css';
 
-// const socket = new WebSocket('wss://relay-vdjw.onrender.com', 'echo-protocol');
-const socket = new WebSocket('ws://localhost:8080', 'echo-protocol');
+const socket = new WebSocket('wss://relay-vdjw.onrender.com', 'echo-protocol');
+// const socket = new WebSocket('ws://localhost:8080', 'echo-protocol');
 
 function App() {
     const msgInput = useRef(null);
