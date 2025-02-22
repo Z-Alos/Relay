@@ -1,5 +1,5 @@
 const WebSocketServer = require('websocket').server;
-const http = require('http');
+const http = require('https');
 
 const PORT = process.env.PORT || 8080;
 const server = http.createServer();
@@ -11,6 +11,7 @@ server.listen(PORT, () => {
 
 wsServer = new WebSocketServer({
     httpServer: server,
+    autoAcceptConnections: true
     // !todo() implement authenticity (origin)
 })
 
