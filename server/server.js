@@ -1,10 +1,11 @@
 const WebSocketServer = require('websocket').server;
 const http = require('http');
 
+const PORT = process.env.PORT || 8080;
 const server = http.createServer();
 
 const room = new Map; 
-server.listen(8080, () => {
+server.listen(PORT, () => {
     console.log("server started on port 8080");
 })
 
