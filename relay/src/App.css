@@ -1,0 +1,35 @@
+#message-container{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    padding: 1rem;
+    width: 100vw;
+}
+
+#message-container:last-child{
+    margin-bottom: 0;
+}
+
+.message-in,
+.message-out{
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin-bottom: 0.3rem;
+}
+
+
+.message-in{
+    float: left;
+    background-color: white;
+}
+
+.message-out{
+    float: right;
+    background-color: peachpuff;
+}
+
+
+
+
+
+
