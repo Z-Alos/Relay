@@ -1,0 +1,6 @@
+#chat-area{
+    height: 100%;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    grid-column: span 2;
+}

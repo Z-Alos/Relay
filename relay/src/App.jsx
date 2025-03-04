@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import './App.css';
+import Chat from "./component/Chat";
 
-const socket = new WebSocket('wss://relay-vdjw.onrender.com', 'echo-protocol');
-// const socket = new WebSocket('ws://localhost:8080', 'echo-protocol');
+// const socket = new WebSocket('wss://relay-vdjw.onrender.com', 'echo-protocol');
+const socket = new WebSocket('ws://localhost:8080', 'echo-protocol');
 
 function App() {
     const msgInput = useRef(null);
@@ -13,21 +14,21 @@ function App() {
         {type: "msg-out", message: "let's take bio-modification to the next level..."}
     ]);
 
-    useEffect(() => {
-        socket.addEventListener('open', () => {
-            socket.send(JSON.stringify({type: "notify", message: "New User Joined..."}));
-            joinRoom();
-        })
-        msgInput.current.focus();
-        socket.addEventListener('message', (event) => {
-            const data = JSON.parse(event.data)
-            console.log("Message: ", data.message); 
-            setMessage(prevMessages => [
-                ...prevMessages,
-                {type: "msg-in", message: data.message}
-            ])
-        })
-    }, [])
+    // useEffect(() => {
+    //     socket.addEventListener('open', () => {
+    //         socket.send(JSON.stringify({type: "notify", message: "New User Joined..."}));
+    //         // joinRoom();
+    //     })
+    //     msgInput.current.focus();
+    //     socket.addEventListener('message', (event) => {
+    //         const data = JSON.parse(event.data)
+    //         console.log("Message: ", data.message); 
+    //         setMessage(prevMessages => [
+    //             ...prevMessages,
+    //             {type: "msg-in", message: data.message}
+    //         ])
+    //     })
+    // }, [])
     
     function joinRoom(){
         roomId.current = window.prompt("Enter Room: ");
@@ -49,8 +50,9 @@ function App() {
     
   return (
    <>
+       <Chat />
    <div id="message-container">
-        {
+        {/* {
         messages.map((msg, id)=> {
             if(msg.type == "msg-in"){
             return <div key={id}><span className="message-in">{msg.message}</span></div>
@@ -59,11 +61,11 @@ function App() {
             return <div key={id}><span className="message-out">{msg.message}</span></div>
             }
         })
-        }
-    <form id="input-bar">
+        } */}
+    {/* <form id="input-bar">
         <input ref={msgInput} type="text" id="msg"/>
         <button type="submit" onClick={sendMsg}>Send</button>
-    </form>
+    </form> */}
     </div>
    </> 
   );

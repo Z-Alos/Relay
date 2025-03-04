@@ -1,0 +1,31 @@
+#side-pane-user-profile{
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#user-image{
+    height: 12vh;
+    width: 12vh;
+    background-color: blueviolet;
+    border-radius: 50%;
+    border: 3px solid var(--primary-hint);
+}
+
+#availability{
+    padding: 0.2rem 0.4rem;
+    display: inline;
+    background-color: var(--primary-hint);
+    border-radius: 5px;
+}
+
+#current-username{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+#current-user-desc{
+    font-size: 1.3rem;
+}
