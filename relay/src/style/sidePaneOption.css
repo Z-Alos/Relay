@@ -1,0 +1,4 @@
+#side-pane-option-container{
+    grid-row: span 2;
+    background-color: var(--secondary-color);
+}

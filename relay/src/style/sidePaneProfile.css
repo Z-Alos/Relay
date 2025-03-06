@@ -7,12 +7,18 @@
 }
 
 #user-image{
-    height: 12vh;
-    width: 12vh;
     background-color: blueviolet;
     border-radius: 50%;
     border: 3px solid var(--primary-hint);
+    overflow: hidden;
 }
+
+#user-image img{
+    height: 12vh;
+    width: 12vh;
+    object-fit: cover;
+    object-position: center;
+}   
 
 #availability{
     padding: 0.2rem 0.4rem;

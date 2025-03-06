@@ -1,15 +1,9 @@
-:root{
-    --primary-color: #191A2E;
-    --secondary-color: #19243F;
-    --tertiary-color: #0F3460;
-    --primary-hint: #E94560;
-    --secondary-hint: #F0FAFB;
-}
-
 #chat-grid{
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
     height: 100vh;
     width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
     color: var(--secondary-hint);
 }

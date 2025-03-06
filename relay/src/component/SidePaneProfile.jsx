@@ -1,3 +1,5 @@
+import profilePic from '../assets/lord_aizen.jpg'
+
 import '../style/sidePaneProfile.css'
 
 function SidePaneProfile(){
@@ -6,7 +8,7 @@ function SidePaneProfile(){
         <div id="side-pane-user-profile">
             <div id="profile-info">
             <div id="user-image">
-                <img src="../assets/lord_aizen.png" alt="user profile" />
+                <img src={profilePic} alt="user profile" />
             </div>
             <div id="availability">online</div>
             </div>

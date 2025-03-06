@@ -1,32 +1,17 @@
-#message-container{
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    padding: 1rem;
-    width: 100vw;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --primary-color: #191A2E;
+    --secondary-color: #19243F;
+    --tertiary-color: #0F3460;
+    --primary-hint: #E94560;
+    --secondary-hint: #F0FAFB;
 }
 
-#message-container:last-child{
-    margin-bottom: 0;
+body{
+    font-family: 'Inter', 'sans-serif';
 }
 
-.message-in,
-.message-out{
-    padding: 0.3rem;
-    border-radius: 5px;
-    margin-bottom: 0.3rem;
-}
-
-
-.message-in{
-    float: left;
-    background-color: white;
-}
-
-.message-out{
-    float: right;
-    background-color: peachpuff;
-}
 
 
 

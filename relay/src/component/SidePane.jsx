@@ -1,5 +1,5 @@
-import AvailUser from './AvailUser'
 import SidePaneProfile from './SidePaneProfile'
+import SidePaneOption from './SidePaneOption'
 
 import '../style/sidePane.css'
 
@@ -8,7 +8,7 @@ function SidePane(){
         <>
         <div id="side-pane">
             <SidePaneProfile />
-            <AvailUser />
+            <SidePaneOption />
         </div>
         
         </>
